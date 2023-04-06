@@ -1,0 +1,33 @@
+<!-- Menambahkan option pada selectbox -->
+
+<!-- Pada contoh ini, sebuah selectbox digunakan untuk memilih buah-buahan dan
+    tombol "Add Banana" digunakan untuk menambahkan option "Banana" ke dalam selectbox. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="fruit">
+        <option value="apple">Apple</option>
+        <option value="orange">Orange</option>
+    </select>
+    <button id="btn">Add Banana</button>
+    
+    <script>
+        const selectBox = document.getElementById('fruit');
+        const button = document.getElementById('btn');
+        button.addEventListener('click', () => {
+            const option = document.createElement('option');
+            option.value = 'banana';
+            option.textContent = 'Banana';
+            selectBox.appendChild(option);
+        });
+    </script>
+</body>
+</html>

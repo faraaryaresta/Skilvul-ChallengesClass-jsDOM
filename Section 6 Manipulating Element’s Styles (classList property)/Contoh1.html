@@ -1,0 +1,37 @@
+<!-- Menghapus kelas dari sebuah elemen -->
+
+<!-- Pada contoh di bawah, kita membuat sebuah elemen p 
+    dengan id="myPara" dan kelas CSS warna-merah. 
+    Selanjutnya, kita membuat sebuah tombol dengan atribut onclick 
+    yang mengeksekusi fungsi hapusKelas() saat diklik. Fungsi hapusKelas() 
+    akan menghapus kelas CSS warna-merah dari elemen p menggunakan metode classList.remove(), 
+    yang akan mengembalikan warna teks ke warna default. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .warna-merah {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p id="myPara" class="warna-merah">Ini adalah paragraf.</p>
+
+    <button onclick="hapusKelas()">Hapus Kelas</button>
+
+    <script>
+        function hapusKelas() {
+        var para = document.getElementById("myPara");
+        para.classList.remove("warna-merah");
+        }
+    </script>
+
+</body>
+</html>

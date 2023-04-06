@@ -1,0 +1,31 @@
+<!-- Menampilkan nilai option yang dipilih -->
+
+<!-- Pada contoh ini, sebuah selectbox digunakan untuk memilih buah-buahan 
+    dan nilai option yang dipilih akan ditampilkan pada halaman.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="fruit">
+        <option value="apple">Apple</option>
+        <option value="orange">Orange</option>
+        <option value="banana">Banana</option>
+    </select>
+    <p id="result"></p>
+      
+    <script>
+        const selectBox = document.getElementById('fruit');
+        const result = document.getElementById('result');
+        selectBox.addEventListener('change', () => {
+            result.textContent = `Anda memilih ${selectBox.value}`;
+        });
+    </script>
+</body>
+</html>

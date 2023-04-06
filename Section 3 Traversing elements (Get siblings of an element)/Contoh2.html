@@ -1,0 +1,30 @@
+<!-- Mengubah background-color dari saudara elemen sebelumnya dari elemen dengan id "div3". -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">Ini adalah div pertama.</div>
+    <div id="div2">Ini adalah div kedua.</div>
+    <div id="div3">Ini adalah div ketiga.</div>
+
+    <button onclick="ubahStyle()">Ubah Style</button>
+
+    <script>
+        function ubahStyle() {
+        var div3 = document.getElementById("div3");
+        var saudaraSebelumnya = div3.previousSibling;
+        while (saudaraSebelumnya.nodeType != 1) {
+            saudaraSebelumnya = saudaraSebelumnya.previousSibling;
+        }
+        saudaraSebelumnya.style.backgroundColor = "red";
+        }
+    </script>
+
+</body>
+</html>

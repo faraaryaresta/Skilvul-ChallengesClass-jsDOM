@@ -1,0 +1,28 @@
+<!-- Mengubah isi teks dari saudara elemen sebelumnya (previous sibling) dari elemen dengan id "teks2" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Ini adalah kalimat pertama.</p>
+    <p id="teks2">Ini adalah kalimat kedua.</p>
+    <p>Ini adalah kalimat ketiga.</p>
+
+    <button onclick="ubahTeks()">Ubah Teks</button>
+
+    <script>
+        function ubahTeks() {
+        var teks2 = document.getElementById("teks2");
+        var saudaraSebelumnya = teks2.previousSibling;
+        saudaraSebelumnya.nodeValue = "Ini adalah kalimat pertama yang diubah.";
+        }
+    </script>
+
+</body>
+</html>

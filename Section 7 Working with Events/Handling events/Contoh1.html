@@ -1,0 +1,36 @@
+<!-- Menggunakan event delegation -->
+
+<!-- Pada contoh di bawah, kita membuat sebuah ul dengan id="myList" dan beberapa item dalam list. 
+    Selanjutnya, kita menambahkan event listener menggunakan metode addEventListener() pada elemen ul. 
+    Saat item dalam list diklik, fungsi yang diberikan akan dijalankan, yang dalam contoh ini akan mengubah 
+    warna teks item yang diklik menjadi merah. Dalam contoh ini kita menggunakan event delegation, yaitu menangani 
+    event pada elemen ul dan mengecek apakah elemen yang di klik adalah li. Hal ini memudahkan dalam menang 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+      </ul>
+      
+    <script>
+        document.getElementById("myList").addEventListener("click", function(event) {
+        if (event.target.tagName === "LI") {
+            event.target.style.color = "red";
+        }
+        });
+    </script>
+      
+</body>
+</html>

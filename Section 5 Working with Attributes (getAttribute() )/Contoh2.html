@@ -1,0 +1,32 @@
+<!-- Mendapatkan nilai atribut src dari sebuah gambar -->
+
+<!-- Pada contoh di bawah, kita membuat sebuah elemen img 
+    dengan id="myImage" dan atribut src yang menunjukkan sumber gambar. 
+    Selanjutnya, kita membuat sebuah tombol dengan atribut onclick yang 
+    mengeksekusi fungsi tampilkanAtribut() saat diklik. Fungsi tampilkanAtribut() 
+    akan mendapatkan nilai atribut src dari elemen img menggunakan metode getAttribute() 
+    dan menampilkannya dalam kotak pesan. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="myImage" src="gambar.jpg" alt="Gambar">
+
+    <button onclick="tampilkanAtribut()">Tampilkan Atribut</button>
+
+    <script>
+        function tampilkanAtribut() {
+            var img = document.getElementById("myImage");
+            var src = img.getAttribute("src");
+            alert(src);
+        }
+    </script>
+</body>
+</html>

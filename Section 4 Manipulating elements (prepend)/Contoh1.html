@@ -1,0 +1,36 @@
+<!-- Menambahkan elemen baru sebelum elemen pertama menggunakan `prepend()` -->
+
+<!-- Pada contoh di bawah, kita membuat sebuah elemen div dengan id="parent" dan 
+    dua elemen div di dalamnya. Selanjutnya, kita membuat sebuah tombol dengan 
+    atribut onclick yang mengeksekusi fungsi tambahElemen() saat diklik. Fungsi 
+    tambahElemen() akan menambahkan sebuah elemen div baru dengan isi "New Child" 
+    di awal elemen div dengan id="parent" menggunakan metode prepend(). 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        <div>Child 1</div>
+        <div>Child 2</div>
+    </div>
+      
+    <button onclick="tambahElemen()">Tambah Elemen</button>
+    
+    <script>
+        function tambahElemen() {
+            var parent = document.getElementById("parent");
+            var div = document.createElement("div");
+            div.innerHTML = "New Child";
+            parent.prepend(div);
+        }
+    </script>
+      
+</body>
+</html>

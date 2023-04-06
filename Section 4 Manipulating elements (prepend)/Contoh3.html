@@ -1,0 +1,27 @@
+<!-- Menambahkan elemen baru setelah elemen pertama menggunakan prepend() -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="tambahElemen()">Tambah Elemen</button>
+
+<script>
+    function tambahElemen() {
+        var parent = document.getElementById("parent");
+        var fragment = new DocumentFragment();
+        for (var i = 0; i < 3; i++) {
+            var div = document.createElement("div");
+            div.innerHTML = "New Child " + (i+1);
+            fragment.appendChild(div);
+        }
+        parent.prepend(fragment);
+        }
+    </script>
+</body>
+</html>

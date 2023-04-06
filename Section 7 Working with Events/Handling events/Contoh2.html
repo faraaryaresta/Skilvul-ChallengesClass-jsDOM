@@ -1,0 +1,25 @@
+<!-- Menambahkan event listener pada sebuah tombol -->
+
+<!-- Pada contoh di bawah, kita membuat sebuah tombol dengan id="myButton". Selanjutnya, kita menambahkan event listener 
+    menggunakan metode addEventListener(). Saat tombol diklik, fungsi yang diberikan akan dijalankan, yang dalam contoh 
+    ini akan menampilkan pesan alert. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="myButton">Klik Saya</button>
+
+    <script>
+        document.getElementById("myButton").addEventListener("click", function() {
+            alert("Tombol telah diklik!");
+        });
+    </script>
+</body>
+</html>

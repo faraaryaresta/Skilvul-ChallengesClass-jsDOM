@@ -1,0 +1,29 @@
+<!-- Mengubah style dari semua elemen saudara berikutnya (next sibling) dari elemen yang mempunyai id "paragraf1" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="paragraf1">Ini adalah paragraf pertama.</p>
+    <p>Ini adalah paragraf kedua.</p>
+    <p>Ini adalah paragraf ketiga.</p>
+
+    <button onclick="ubahStyle()">Ubah Style</button>
+
+    <script>
+        function ubahStyle() {
+            var paragraf1 = document.getElementById("paragraf1");
+            var saudaraBerikutnya = paragraf1.nextSibling;
+            while (saudaraBerikutnya) {
+                saudaraBerikutnya.style.color = "red";
+                saudaraBerikutnya = saudaraBerikutnya.nextSibling;
+            }
+        }
+    </script>
+</body>
+</html>

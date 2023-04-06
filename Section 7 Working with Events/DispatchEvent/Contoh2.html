@@ -1,0 +1,33 @@
+<!-- Men-dispatch event custom pada sebuah elemen -->
+
+<!-- Pada contoh di bawah, kita membuat sebuah div dengan id="myDiv". 
+    Selanjutnya, kita membuat event object menggunakan konstruktor Event dengan konfigurasi yang diinginkan. 
+    Kemudian, kita men-dispatch event tersebut menggunakan metode dispatchEvent(). Saat event custom di-trigger, 
+    fungsi yang diberikan akan dijalankan, yang dalam contoh ini akan menampilkan pesan alert. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv">Hello, world!</div>
+
+    <script>
+        var event = new Event('customEvent', {
+            'bubbles': true,
+            'cancelable': true
+        });
+
+        document.getElementById("myDiv").dispatchEvent(event);
+
+        document.getElementById("myDiv").addEventListener("customEvent", function() {
+            alert("Event telah di-trigger!");
+        });
+    </script>
+</body>
+</html>

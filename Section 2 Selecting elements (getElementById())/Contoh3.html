@@ -1,0 +1,25 @@
+<!-- Menampilkan nilai dari input dengan id "nama" pada elemen dengan id "hasil" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="nama">Nama:</label>
+    <input type="text" id="nama">
+    <button onclick="tampilkan()">Tampilkan</button>
+    <p id="hasil"></p>
+
+    <script>
+    function tampilkan() {
+        var inputNama = document.getElementById("nama");
+        var hasil = document.getElementById("hasil");
+        hasil.innerHTML = "Halo " + inputNama.value + "!";
+    }
+    </script>
+</body>
+</html>
