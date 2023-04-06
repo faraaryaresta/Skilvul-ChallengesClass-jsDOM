@@ -22,18 +22,7 @@
   
   <button onclick="tambahElemen()">Tambah Elemen</button>
   
-  <script>
-    function tambahElemen() {
-      var parent = document.getElementById("parent");
-      var fragment = new DocumentFragment();
-      for (var i = 0; i < 3; i++) {
-        var div = document.createElement("div");
-        div.innerHTML = "New Child " + (i+1);
-        fragment.appendChild(div);
-      }
-      parent.prepend(fragment);
-    }
-  </script>
+  <script src="script2.js"></script>
       
 </body>
 </html>

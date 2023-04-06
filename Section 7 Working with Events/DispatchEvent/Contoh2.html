@@ -17,17 +17,6 @@
 <body>
     <div id="myDiv">Hello, world!</div>
 
-    <script>
-        var event = new Event('customEvent', {
-            'bubbles': true,
-            'cancelable': true
-        });
-
-        document.getElementById("myDiv").dispatchEvent(event);
-
-        document.getElementById("myDiv").addEventListener("customEvent", function() {
-            alert("Event telah di-trigger!");
-        });
-    </script>
+    <script src="script2.js"></script>
 </body>
 </html>
